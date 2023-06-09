@@ -27,10 +27,6 @@
                             <p class="text-muted">{{ $profileData->email }} </p>
                         </div>
                         <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Role:</label>
-                            <p class="text-muted">{{ $profileData->role }} </p>
-                        </div>
-                        <div class="mt-3">
                             <label class="tx-11 fw-bolder mb-0 text-uppercase">Phone:</label>
                             <p class="text-muted">{{ $profileData->phone }} </p>
                         </div>
@@ -79,11 +75,6 @@
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" name="email" class="form-control" id="email"
                                             autocomplete="off" value="{{ $profileData->email }}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="role" class="form-label">Role</label>
-                                        <input type="text" name="role" class="form-control" id="role"
-                                            autocomplete="off" value="{{ $profileData->role }}">
                                     </div>
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone</label>
