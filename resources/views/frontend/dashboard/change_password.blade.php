@@ -6,10 +6,10 @@
         style="background-image: url({{ asset('frontend/assets/images/background/page-title-5.jpg') }});">
         <div class="auto-container">
             <div class="content-box clearfix">
-                <h1>User Profile </h1>
+                <h1>Change Password </h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
-                    <li>User Profile </li>
+                    <li>Change Password </li>
                 </ul>
             </div>
         </div>
@@ -67,55 +67,41 @@
                         <div class="news-block-one">
                             <div class="inner-box">
 
-                                <div class="lower-content">
-                                    {{-- <h3>Including Animation In Your Design System.</h3>
-                                    <ul class="post-info clearfix">
-                                        <li class="author-box">
-                                            <figure class="author-thumb"><img src="assets/images/news/author-1.jpg"
-                                                    alt=""></figure>
-                                            <h5><a href="blog-details.html">Eva Green</a></h5>
-                                        </li>
-                                        <li>April 10, 2020</li> --}}
-                                    </ul>
+                                <div class="lower-content">                                    
 
-
-                                    <form action="{{ route('user.profile.store')}}" method="post" enctype="multipart/form-data" class="default-form">
+                                    <form action="{{ route('user.password.update')}}" method="post" class="default-form">
                                         @csrf
                                         <div class="form-group">
-                                            <label>Username</label>
-                                            <input type="text" name="username" id="username" value="{{ $userData->username}}" required="">
+                                            <label>Old Password</label>
+                                            <input type="password" name="old_password" id="old_password" 
+                                                class=" form-control
+                                                    @error('old_password')
+                                                        is-invalid
+                                                    @enderror                                                
+                                                "
+                                            >
+                                            @error('old_password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label>Name</label>
-                                            <input type="text" name="name" id="name" value="{{ $userData->name}}" required="">
+                                            <label>New Password</label>
+                                            <input type="password" name="new_password" id="new_password" 
+                                                class="form-control
+                                                    @error('new_password')
+                                                        is-invalid
+                                                    @enderror                                                
+                                                "
+                                            >
+                                            @error('new_password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                         </div>
+                                        
                                         <div class="form-group">
-                                            <label>Email address</label>
-                                            <input type="email" name="email" id="email" value="{{ $userData->email}}" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Role</label>
-                                            <input type="text" name="role" id="role" value="{{ $userData->role}}" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Phone</label>
-                                            <input type="text" name="phone" id="phone" value="{{ $userData->phone}}" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Address</label>
-                                            <input type="text" name="address" id="address" value="{{ $userData->address}}" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="formFile" class="form-label">Photo</label>
-                                            <input class="form-control" type="file" id="image" name="photo" >
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="formFile" class="form-label"></label>
-                                            <img id="showImage" class="wd-80 rounded-circle"
-                                            src="{{ !empty($userData->photo) ? url('upload/user_images/' . $userData->photo) : url('upload/no_image.jpg') }}"
-                                            alt="profile" style="width: 100px; height: 100px;">
-                                        </div>
-
+                                            <label>Password Confirmation</label>
+                                            <input type="password" name="new_password_confirmation" id="new_password_confirmation" class="form-control" >
+                                        </div>                                        
 
                                         <div class="form-group message-btn">
                                             <button type="submit" class="theme-btn btn-one">Save Changes </button>
@@ -165,16 +151,5 @@
             </div>
         </div>
     </section>
-    <!-- subscribe-section end -->
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#image').change(function(e){
-                var reader = new FileReader();
-                reader.onload = function(e){
-                    $('#showImage').attr('src',e.target.result);
-                }
-                reader.readAsDataURL(e.target.files['0']);
-            });
-        });
-    </script>
+    <!-- subscribe-section end -->    
 @endsection
