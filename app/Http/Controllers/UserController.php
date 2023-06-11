@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class UserController extends Controller
 {
 
@@ -48,5 +49,19 @@ class UserController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->back()->with($notification);   
+    }
+
+    /**
+     * Destroy an authenticated session.
+     */
+    public function UserLogout(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }
