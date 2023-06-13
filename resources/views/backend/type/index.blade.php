@@ -4,7 +4,7 @@
 
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
-                <a href="{{route('add.type')}}" class="btn btn-outline-success">Add Property Type</a>
+                <a href="{{ route('admin.property-types.create') }}" class="btn btn-outline-success">Add Property Type</a>
             </ol>
         </nav>
 
@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h6 class="card-title">Property Type All</h6>
-                        
+
                         <div class="table-responsive">
                             <table id="dataTableExample" class="table">
                                 <thead>
@@ -28,11 +28,17 @@
                                     @foreach ($types as $type)
                                         <tr>
                                             <td>{{ $loop->index + 1 }}</td>
-                                            <td>{{ $type->type_name}}</td>
-                                            <td>{{ $type->type_icon}}</td>
+                                            <td>{{ $type->type_name }}</td>
+                                            <td>{{ $type->type_icon }}</td>
                                             <td>
-                                                <a href="{{ route('edit.type', $type->id)}}" class="btn btn-outline-primary">Edit</a>
-                                                <a href="#" class="btn btn-outline-danger">Delete</a>
+                                                <a href="{{ route('admin.property-types.edit', $type->id) }}"
+                                                    class="btn btn-outline-primary">Edit</a>
+                                                <form action="{{ route('admin.property-types.destroy', $type->id) }}"
+                                                    method="POST" onsubmit="return confirm('are you sure?')">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-outline-danger" type="submit">Delete</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

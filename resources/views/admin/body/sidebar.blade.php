@@ -29,10 +29,10 @@
                 <div class="collapse" id="emails">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{ route('all.type')}}" class="nav-link">All Type</a>
+                            <a href="{{ route('admin.property-types.index')}}" class="nav-link">All Type</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('add.type')}}" class="nav-link">Add Type</a>
+                            <a href="{{ route('admin.property-types.create')}}" class="nav-link">Add Type</a>
                         </li>
                         
                     </ul>

@@ -1,6 +1,11 @@
 @extends('admin.admin_dashboard')
 @section('admin')
     <div class="page-content">
+        <nav class="page-breadcrumb">
+            <ol class="breadcrumb">
+                <a href="{{route('admin.property-types.index')}}" class="btn btn-outline-success">Back</a>
+            </ol>
+        </nav>
         <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
@@ -8,7 +13,7 @@
 
                         <h6 class="card-title">Add Property Type</h6>
 
-                        <form action="{{ route('store.type')}}" method="POST" class="forms-sample">
+                        <form action="{{ route('admin.property-types.store')}}" method="POST" class="forms-sample">
                             @csrf
                             <div class="mb-3">
                                 <label for="type_name" class="form-label">Type Name</label>
