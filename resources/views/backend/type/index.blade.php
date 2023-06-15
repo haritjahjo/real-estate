@@ -33,12 +33,14 @@
                                             <td>
                                                 <a href="{{ route('admin.property-types.edit', $type->id) }}"
                                                     class="btn btn-outline-primary">Edit</a>
-                                                <form action="{{ route('admin.property-types.destroy', $type->id) }}"
-                                                    method="POST" onsubmit="return confirm('are you sure?')">
+                                                <a href="{{ route('admin.property-types.destroy', $type->id) }}"
+                                                    class="btn btn-outline-danger" id="delete">Delete</a>
+                                                {{-- <form action="{{ route('admin.property-types.destroy', $type->id) }}"
+                                                    method="POST" >
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-outline-danger" type="submit">Delete</button>
-                                                </form>
+                                                </form> --}}
                                             </td>
                                         </tr>
                                     @endforeach
