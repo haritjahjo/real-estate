@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\Backend\AmenityController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -60,4 +61,5 @@ Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function(){
     // Property Type All Route
     Route::resource('property-types', PropertyTypeController::class);
+    Route::resource('amenities', AmenityController::class);
 });
