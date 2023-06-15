@@ -35,12 +35,9 @@ class AmenityController extends Controller
     {
         Amenity::create([
             'name' => $request->name,
-        ]);
-        $notification = array(
-            'message' => 'Amenity Created successfully',
-            'alert-type' => 'success'
-        );
-        return to_route('admin.amenities.index')->with($notification);
+        ]);        
+
+        return to_route('admin.amenities.index')->with('success', 'Amenity Created successfully!');
     }
 
     /**
@@ -68,11 +65,8 @@ class AmenityController extends Controller
         $amenity->update([
             'name' => $request->name,
         ]);
-        $notification = array(
-            'message' => 'Amenity Updated successfully',
-            'alert-type' => 'success'
-        );
-        return to_route('admin.amenities.index')->with($notification);
+        
+        return to_route('admin.amenities.index')->with('success', 'Amenity Updated successfully');
 
     }
 
@@ -84,7 +78,7 @@ class AmenityController extends Controller
         $amenity->delete();
         $notification = array(
             'message' => 'Amenity Deleted successfully',
-            'alert-type' => 'danger'
+            'alert-type' => 'danger',
         );
         return to_route('admin.amenities.index')->with($notification);
     }

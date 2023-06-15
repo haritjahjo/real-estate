@@ -57,7 +57,7 @@ License: For each use you must have a valid license purchased only from above li
 
 <body>
     <div class="main-wrapper">
-
+        @include('sweetalert::alert')
         <!-- partial:partials/_sidebar.html -->
         @include('admin.body.sidebar')
 
@@ -126,8 +126,7 @@ License: For each use you must have a valid license purchased only from above li
             }
         @endif
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
     <!-- Custom js for this page -->
     <script src="{{ asset('backend/assets/js/code/code.js') }}"></script>
     <script src="{{ asset('backend/assets/js/code/validate.min.js') }}"></script>
