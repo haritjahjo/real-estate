@@ -57,7 +57,7 @@ License: For each use you must have a valid license purchased only from above li
 
 <body>
     <div class="main-wrapper">
-        @include('sweetalert::alert')
+        {{-- @include('sweetalert::alert') --}}
         <!-- partial:partials/_sidebar.html -->
         @include('admin.body.sidebar')
 
