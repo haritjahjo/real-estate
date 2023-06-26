@@ -27,6 +27,9 @@ License: For each use you must have a valid license purchased only from above li
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- End fonts -->
 
+    <link rel="stylesheet" href="{{ asset('backend/assets/vendors/select2/select2.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('backend/assets/vendors/jquery-tags-input/jquery.tagsinput.min.css')}}">
+
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css') }}">
     <!-- End plugin css for this page -->
@@ -136,6 +139,17 @@ License: For each use you must have a valid license purchased only from above li
     <script src="{{ asset('backend/assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
     <!-- End plugin js for this page -->
+    <!-- Input Tags -->
+    <script src="{{ asset('backend/assets/vendors/inputmask/jquery.inputmask.min.js')}}"></script>
+	<script src="{{ asset('backend/assets/vendors/select2/select2.min.js')}}"></script>
+	<script src="{{ asset('backend/assets/vendors/typeahead.js/typeahead.bundle.min.js')}}"></script>
+	<script src="{{ asset('backend/assets/vendors/jquery-tags-input/jquery.tagsinput.min.js')}}"></script>
+    <!-- End Input Tags-->
+
+    <script src="{{ asset('backend/assets/js/inputmask.js')}}"></script>
+	<script src="{{ asset('backend/assets/js/select2.js')}}"></script>
+	<script src="{{ asset('backend/assets/js/typeahead.js')}}"></script>
+	<script src="{{ asset('backend/assets/js/tags-input.js')}}"></script>
     
 </body>
 

@@ -17,8 +17,7 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Property Name</label>
-                                        <input type="text" class="form-control" id="name" name="name"
-                                            placeholder="Enter first name">
+                                        <input type="text" class="form-control" id="name" name="name">
                                     </div>
                                 </div><!-- Col -->
 
@@ -38,15 +37,13 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Max Price</label>
-                                        <input type="text" class="form-control" id="lower_price" name="lower_price"
-                                            placeholder="Enter Lower Price">
+                                        <input type="text" class="form-control" id="lower_price" name="lower_price">
                                     </div>
                                 </div><!-- Col -->
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Lower Price</label>
-                                        <input type="text" class="form-control" id="max_price" name="max_price"
-                                            placeholder="Enter Max Price">
+                                        <input type="text" class="form-control" id="max_price" name="max_price">
                                     </div>
                                 </div><!-- Col -->
                                 <div class="col-sm-6">
@@ -71,40 +68,131 @@
                             
 
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">City</label>
-                                        <input type="text" class="form-control" placeholder="Enter city">
+                                        <label class="form-label">Bed Rooms</label>
+                                        <input type="text" class="form-control" id="bedrooms" name="bedrooms">
                                     </div>
                                 </div><!-- Col -->
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">State</label>
-                                        <input type="text" class="form-control" placeholder="Enter state">
+                                        <label class="form-label">Bath Rooms</label>
+                                        <input type="text" class="form-control" id="bathrooms" name="bathrooms">
                                     </div>
                                 </div><!-- Col -->
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">Zip</label>
-                                        <input type="text" class="form-control" placeholder="Enter zip code">
+                                        <label class="form-label">Garage</label>
+                                        <input type="text" class="form-control" id="garage" name="garage">
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">Garage Size</label>
+                                        <input type="text" class="form-control" id="garage_size" name="garage_size">
                                     </div>
                                 </div><!-- Col -->
                             </div><!-- Row -->
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">Email address</label>
-                                        <input type="email" class="form-control" placeholder="Enter email">
+                                        <label class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address" name="address">
                                     </div>
                                 </div><!-- Col -->
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">Password</label>
-                                        <input type="password" class="form-control" autocomplete="off"
-                                            placeholder="Password">
+                                        <label class="form-label">City</label>
+                                        <input type="text" class="form-control" id="city" name="city">
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">State</label>
+                                        <input type="text" class="form-control" id="state" name="state">
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-3">
+                                    <div class="mb-3">
+                                        <label class="form-label">Postal Code</label>
+                                        <input type="text" class="form-control" id="postal_code" name="postal_code">
                                     </div>
                                 </div><!-- Col -->
                             </div><!-- Row -->
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Property Size</label>
+                                        <input type="text" class="form-control" id="size" name="size">
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Property Video</label>
+                                        <input type="text" class="form-control" id="video" name="video">
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Neighborhood</label>
+                                        <input type="text" class="form-control" id="neighborhood" name="neighborhood">
+                                    </div>
+                                </div><!-- Col -->
+                            </div><!-- Row -->
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Latitude</label>
+                                        <input type="text" class="form-control"  id="latitude" name="latitude" >
+                                        <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank" >Go here to get Latitude</a>
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Longitude</label>
+                                        <input type="text" class="form-control" id="longitude" name="longitude" >
+                                        <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank" >Go here to get Longitude</a>
+                                    </div>
+                                </div><!-- Col -->
+                            </div><!-- Row -->
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Property Type</label>
+                                        <select class="form-select" id="exampleFormControlSelect1">
+                                            <option selected disabled>Select Property Status</option>
+                                            @foreach ($propertyTypes as $type)
+                                                <option value="{{ $type->id}}">{{ $type->type_name}}</option>
+                                            @endforeach                                                                                        
+                                        </select>
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Property Amenities</label>
+                                        <select class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%">                                            
+                                            @foreach ($amenities as $amenity)
+                                                <option value="{{ $amenity->id}}">{{ $amenity->name}}</option>
+                                            @endforeach                                                                                        
+                                        </select>
+                                    </div>
+                                </div><!-- Col -->
+                                <div class="col-sm-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Agent</label>
+                                        <select class="form-select" id="exampleFormControlSelect1">
+                                            <option selected disabled>Select Property Status</option>
+                                            @foreach ($activeAgents as $activeAgent)
+                                                <option value="{{ $activeAgent->id}}">{{ $activeAgent->name}}</option>
+                                            @endforeach                                                                                        
+                                        </select>
+                                    </div>
+                                </div><!-- Col -->
+                            </div><!-- Row -->
+
                         </form>
                         <button type="button" class="btn btn-primary submit">Submit form</button>
                     </div>
