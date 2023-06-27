@@ -49,23 +49,25 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="formFile">Main Thumbnail</label>
-                                        <input class="form-control" type="file" id="thumbnail" name="thumbnail" onchange="mainThumbUrl(this)">
-                                        <img src="" id="mainThumb" >
+                                        <input class="form-control" type="file" id="thumbnail" name="thumbnail"
+                                            onchange="mainThumbUrl(this)">
+                                        <img src="" id="mainThumb">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="formFile">Multi Image</label>
-                                        <input class="form-control" type="file" id="multiImg" name="multi_img[]" multiple="">
+                                        <input class="form-control" type="file" id="multiImg" name="multi_img[]"
+                                            multiple="">
                                         <div class="row" id="preview_img">
 
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div><!-- Row -->
-                            
-                            
+
+
 
                             <div class="row">
                                 <div class="col-sm-3">
@@ -136,7 +138,8 @@
                                 <div class="col-sm-4">
                                     <div class="mb-3">
                                         <label class="form-label">Neighborhood</label>
-                                        <input type="text" class="form-control" id="neighborhood" name="neighborhood">
+                                        <input type="text" class="form-control" id="neighborhood"
+                                            name="neighborhood">
                                     </div>
                                 </div><!-- Col -->
                             </div><!-- Row -->
@@ -145,15 +148,17 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Latitude</label>
-                                        <input type="text" class="form-control"  id="latitude" name="latitude" >
-                                        <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank" >Go here to get Latitude</a>
+                                        <input type="text" class="form-control" id="latitude" name="latitude">
+                                        <a href="https://www.latlong.net/convert-address-to-lat-long.html"
+                                            target="_blank">Go here to get Latitude</a>
                                     </div>
                                 </div><!-- Col -->
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Longitude</label>
-                                        <input type="text" class="form-control" id="longitude" name="longitude" >
-                                        <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank" >Go here to get Longitude</a>
+                                        <input type="text" class="form-control" id="longitude" name="longitude">
+                                        <a href="https://www.latlong.net/convert-address-to-lat-long.html"
+                                            target="_blank">Go here to get Longitude</a>
                                     </div>
                                 </div><!-- Col -->
                             </div><!-- Row -->
@@ -165,18 +170,19 @@
                                         <select class="form-select" id="exampleFormControlSelect1">
                                             <option selected disabled>Select Property Status</option>
                                             @foreach ($propertyTypes as $type)
-                                                <option value="{{ $type->id}}">{{ $type->type_name}}</option>
-                                            @endforeach                                                                                        
+                                                <option value="{{ $type->id }}">{{ $type->type_name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div><!-- Col -->
                                 <div class="col-sm-4">
                                     <div class="mb-3">
                                         <label class="form-label">Property Amenities</label>
-                                        <select class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%">                                            
+                                        <select class="js-example-basic-multiple form-select" multiple="multiple"
+                                            data-width="100%">
                                             @foreach ($amenities as $amenity)
-                                                <option value="{{ $amenity->id}}">{{ $amenity->name}}</option>
-                                            @endforeach                                                                                        
+                                                <option value="{{ $amenity->id }}">{{ $amenity->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div><!-- Col -->
@@ -186,12 +192,43 @@
                                         <select class="form-select" id="exampleFormControlSelect1">
                                             <option selected disabled>Select Property Status</option>
                                             @foreach ($activeAgents as $activeAgent)
-                                                <option value="{{ $activeAgent->id}}">{{ $activeAgent->name}}</option>
-                                            @endforeach                                                                                        
+                                                <option value="{{ $activeAgent->id }}">{{ $activeAgent->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div><!-- Col -->
                             </div><!-- Row -->
+
+                            <div class="col-sm-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Short Desription</label>
+                                    <textarea class="form-control" id="longitude" name="longitude" rows="3"></textarea>
+                                </div>
+                            </div><!-- Col -->
+                            <div class="col-sm-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Long Description</label>
+
+                                    <textarea class="form-control" name="tinymce" id="tinymceExample" rows="3"></textarea>
+                                </div>
+                            </div><!-- Col -->
+                            <hr>
+                            <div class="mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" id="featured" value="1" class="form-check-input" id="checkInline1">
+                                    <label class="form-check-label" for="checkInline1">
+                                        Featured Property
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" name="hot" value="1" class="form-check-input" id="checkInline">
+                                    <label class="form-check-label" for="checkInline">
+                                        Hot Property
+                                    </label>
+                                </div>
+                                
+                            </div>
+
 
                         </form>
                         <button type="button" class="btn btn-primary submit">Submit form</button>
@@ -233,45 +270,47 @@
     </script>
 
     <script type="text/javascript">
-        function mainThumbUrl(input){
-            if(input.files && input.files[0]){
+        function mainThumbUrl(input) {
+            if (input.files && input.files[0]) {
                 var reader = new FileReader();
-                reader.onload = function(e){
+                reader.onload = function(e) {
                     $('#mainThumb').attr('src', e.target.result).width(80).height(80);
                 };
                 reader.readAsDataURL(input.files[0]);
-                
+
             }
         }
     </script>
 
-    <script> 
- 
-  $(document).ready(function(){
-   $('#multiImg').on('change', function(){ //on file input change
-      if (window.File && window.FileReader && window.FileList && window.Blob) //check File API supported browser
-      {
-          var data = $(this)[0].files; //this file data
-           
-          $.each(data, function(index, file){ //loop though each file
-              if(/(\.|\/)(gif|jpe?g|png|webp)$/i.test(file.type)){ //check supported file type
-                  var fRead = new FileReader(); //new filereader
-                  fRead.onload = (function(file){ //trigger function on successful read
-                  return function(e) {
-                      var img = $('<img/>').addClass('thumb').attr('src', e.target.result) .width(100)
-                  .height(80); //create image element 
-                      $('#preview_img').append(img); //append image to output element
-                  };
-                  })(file);
-                  fRead.readAsDataURL(file); //URL representing the file's data.
-              }
-          });
-           
-      }else{
-          alert("Your browser doesn't support File API!"); //if File API is absent
-      }
-   });
-  });
-   
-  </script>
+    <script>
+        $(document).ready(function() {
+            $('#multiImg').on('change', function() { //on file input change
+                if (window.File && window.FileReader && window.FileList && window
+                    .Blob) //check File API supported browser
+                {
+                    var data = $(this)[0].files; //this file data
+
+                    $.each(data, function(index, file) { //loop though each file
+                        if (/(\.|\/)(gif|jpe?g|png|webp)$/i.test(file
+                                .type)) { //check supported file type
+                            var fRead = new FileReader(); //new filereader
+                            fRead.onload = (function(file) { //trigger function on successful read
+                                return function(e) {
+                                    var img = $('<img/>').addClass('thumb').attr('src',
+                                            e.target.result).width(100)
+                                        .height(80); //create image element 
+                                    $('#preview_img').append(
+                                        img); //append image to output element
+                                };
+                            })(file);
+                            fRead.readAsDataURL(file); //URL representing the file's data.
+                        }
+                    });
+
+                } else {
+                    alert("Your browser doesn't support File API!"); //if File API is absent
+                }
+            });
+        });
+    </script>
 @endsection
